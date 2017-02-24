@@ -1,0 +1,20 @@
+{
+  "name": "compromisso-system",
+  "version": "1.0.0",
+  "description": "Compromise system",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -a localhost -p 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardo403/compromisso-system.git"
+  },
+  "author": "Leonardo Lima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leonardo403/compromisso-system/issues"
+  },
+  "homepage": "https://github.com/leonardo403/compromisso-system#readme"
+}
