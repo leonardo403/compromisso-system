@@ -15,23 +15,26 @@ myApp.controller("myController", function($scope){
     $scope.salvarComp = function(){
         $scope.compromissos.push($scope.newComp);
         $scope.newComp = {};
-        $scope.message = "cadastro com sucesso.";
+        $scope.message = "Cadastrado com sucesso.";
     };
 
     $scope.selectComp = function(comp){
+        console.log(comp);
        $scope.clickedComp = comp;     
     };
 
     $scope.updateComp = function(){
-        $scope.message = "atualizado com sucesso.";
+        $scope.compromissos.push($scope.clickedComp);        
+        $scope.message = "Atualizado com sucesso.";
     };
 
     $scope.deleteComp = function(){
         $scope.compromissos.splice($scope.compromissos.indexOf($scope.clickedComp), 1);
-        $scope.message = "compromisso deletado.";
+        $scope.message = "Compromisso deletado.";
     };
 
-    $scope.clearMessage = function(){
+    $scope.clearMessage = function(message){
+        console.log(message);
         $scope.message = "";
     };
 });
