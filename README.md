@@ -10,5 +10,5 @@ npm install no terminal
 npm start
 
 #Updates a serem feitos
-1- tela de login;
-2- rotas
+###1- tela de login;
+###2- rotas
