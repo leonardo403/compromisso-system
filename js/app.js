@@ -32,7 +32,7 @@ myApp.controller("myController", function($scope){
     };
 
     $scope.deleteComp = function(){
-        $scope.compromissos.splice($scope.compromissos.indexOf($scope.clickedComp), 1);
+        $scope.compromissos.splice($scope.compromissos.indexOf, 1);        
         $scope.message = "Compromisso deletado.";
     };
 

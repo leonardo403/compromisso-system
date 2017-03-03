@@ -134,27 +134,36 @@
               </div>
             </div>
           </form>
-          <div ng-show="cadastroForm.consultor.$invalid && cadastroForm.consultor.$dirty" class="alert alert-danger">
-              <strong>Por favor, preencha o campo consultor !</strong>
+          <div ng-messages="cadastroForm.consultor.$error">
+              <div ng-message="required" class="alert alert-danger">
+                <strong>Por favor, preencha o campo consultor !</strong>
+              </div>
           </div>
-          <div ng-show="cadastroForm.email.$invalid && cadastroForm.email.$dirty" class="alert alert-danger">
-              <strong>Por favor, preencha o campo e-mail !</strong>
+          <div ng-messages="cadastroForm.email.$error">
+              <div ng-message="required" class="alert alert-danger">
+                <strong>Por favor, preencha o campo e-mail !</strong>
+              </div>
+          </div>          
+          <div ng-messages="cadastroForm.titulo.$error">
+              <div ng-message="required" class="alert alert-danger">
+                <strong>Por favor, preencha o campo título !</strong>
+              </div>
           </div>
-          <div ng-show="cadastroForm.titulo.$invalid && cadastroForm.titulo.$titulo" class="alert alert-danger">
-              <strong>Por favor, preencha o campo título !</strong>
-          </div>
-          <div ng-show="cadastroForm.dt_inicio.$invalid && cadastroForm.dt_inicio.$dirty" class="alert alert-danger">
+          <div ng-messages="cadastroForm.dt_inicio.$error">
+            <div ng-message="required" class="alert alert-danger">
               <strong>Por favor, preencha o campo data/hora início !</strong>
+            </div>
           </div>
-          <div ng-show="cadastroForm.dt_termino.$invalid && cadastroForm.dt_termino.$dirty" class="alert alert-danger">
-              <strong>Por favor, preencha o campo data/hora término !</strong>
-          </div>
-        </div>
+          <div ng-messages="cadastroForm.dt_termino.$error">
+              <div ng-message="required" class="alert alert-danger">
+                <strong>Por favor, preencha o campo data/hora término !</strong>
+              </div>  
+          </div> 
+        </div>        
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
         </div>
-      </div>
-      
+      </div>      
     </div>
   </div>
   <!--Modal editar compromisso-->
@@ -213,21 +222,32 @@
               </div>
             </div>
           </form>
-          <div ng-show="editarForm.consultor.$invalid && editarForm.consultor.$dirty" class="alert alert-danger">
-              <strong>Por favor, preencha o campo consultor !</strong>
+          <div ng-messages="editarForm.consultor.$error">
+              <div ng-message="required" class="alert alert-danger">
+                <strong>Por favor, preencha o campo consultor !</strong>
+              </div>
           </div>
-          <div ng-show="editarForm.email.$invalid && editarForm.email.$dirty" class="alert alert-danger">
-              <strong>Por favor, preencha o campo e-mail !</strong>
+          <div ng-messages="editarForm.email.$error">
+              <div ng-message="required" class="alert alert-danger">
+                <strong>Por favor, preencha o campo e-mail !</strong>
+              </div>
+          </div>          
+          <div ng-messages="editarForm.titulo.$error">
+              <div ng-message="required" class="alert alert-danger">
+                <strong>Por favor, preencha o campo título !</strong>
+              </div>
           </div>
-          <div ng-show="editarForm.titulo.$invalid && editarForm.titulo.$titulo" class="alert alert-danger">
-              <strong>Por favor, preencha o campo título !</strong>
-          </div>
-          <div ng-show="editarForm.dt_inicio.$invalid && editarForm.dt_inicio.$dirty" class="alert alert-danger">
+          <div ng-messages="editarForm.dt_inicio.$error">
+            <div ng-message="required" class="alert alert-danger">
               <strong>Por favor, preencha o campo data/hora início !</strong>
+            </div>
           </div>
-          <div ng-show="editarForm.dt_termino.$invalid && editarForm.dt_termino.$dirty" class="alert alert-danger">
-              <strong>Por favor, preencha o campo data/hora término !</strong>
+          <div ng-messages="editarForm.dt_termino.$error">
+              <div ng-message="required" class="alert alert-danger">
+                <strong>Por favor, preencha o campo data/hora término !</strong>
+              </div>  
           </div>
+          
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
@@ -249,7 +269,7 @@
           <h4 class="modal-title">Você têm certeza ?</h4>
         </div>
         <div class="modal-body">
-          <strong class="text-danger text-center">Você vai deletar o compromisso.</strong>
+          <strong class="text-danger text-center">Que vai deletar o compromisso.</strong>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="deleteComp()">Sim</button>
@@ -268,6 +288,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- AngularJS and app.js -->
     <script src="js/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.6.2/angular-messages.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
