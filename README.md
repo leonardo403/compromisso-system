@@ -4,11 +4,7 @@
 git clone https://github.com/leonardo403/compromisso-system.git
 
 #Run NPM install
-npm install no terminal
+npm install 
 
 #Rodar localhost
 npm start
-
-#Updates a serem feitos
-###1- tela de login;
-###2- rotas
